@@ -6,6 +6,7 @@ public class Studente {
 	private String cognome;
 	private int matricola;
 
+	//utilizzo i metodi get e set per poter utilizzare le variabili della classe Studente nella classe Registro, assegnando i valori all'oggetto creato
 	public String getNome() {
 		return nome;
 

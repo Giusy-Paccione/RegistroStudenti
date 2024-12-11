@@ -76,8 +76,7 @@ public class Registro {
 		do {
 			System.out.println("Inserire nuova matricola di 4 cifre per lo studente:");
 			matricola = scanner.nextInt();
-			// ciclo per controllare che la matricola inserita dall'utente sia diversa da
-			// quelle degli studenti già esistenti
+			// ciclo per controllare che la matricola inserita dall'utente non sia già in uso 
 			for (Studente i : studenti) {
 				if (i.getMatricola() == matricola) {
 					System.out.println("Matricola già esistente. Riprovare.");
@@ -90,6 +89,7 @@ public class Registro {
 				}
 				break;
 			}
+			//richiamo il metodo menu alla fine dei metodi che corrispondono alle azioni, così che si possa scegliere un'altra azione
 			menu(scanner, studenti);
 		} while (true);
 
@@ -100,7 +100,7 @@ public class Registro {
 		do {
 			System.out.println("Inserire matricola dello studente che vuoi cercare:");
 			int matricola = scanner.nextInt();
-
+			// ciclo per scorrere l'ArrayList e scoprire se la matricola inserita è esistente all'interno dell'ArrayList studenti 
 			for (Studente i : studenti) {
 				if (i.getMatricola() != matricola) {
 					System.out.println("Matricola non esistente");
